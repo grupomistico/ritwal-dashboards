@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
@@ -161,6 +162,9 @@ export function ExecutiveDashboard({ data }: ExecutiveDashboardProps) {
           <Sparkles size={14} aria-hidden="true" />
           <strong>Prototipo funcional</strong>
           <span>Todos los valores visibles son demostrativos, no cifras de Ritwal.</span>
+          <Link href="/presentaciones/avance-presupuesto-agosto-2026-08-18">
+            Abrir snapshot certificado
+          </Link>
         </div>
 
         <section className="executive-brief" aria-labelledby="brief-title">

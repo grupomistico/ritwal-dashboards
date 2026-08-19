@@ -8,7 +8,7 @@
   --surface: #fffdf8;
   --surface-muted: #f1e8d9;
   --ink: #27231f;
-  --muted: #776f66;
+  --muted: #675f57;
   --line: rgba(87, 72, 56, 0.14);
   --line-strong: rgba(87, 72, 56, 0.24);
   --sol-suave: #ddc9a3;
@@ -294,6 +294,13 @@ a:focus-visible,
 
 .demo-banner strong {
   color: var(--ink);
+}
+
+.demo-banner a {
+  margin-left: auto;
+  color: var(--bosco);
+  font-weight: 700;
+  text-underline-offset: 3px;
 }
 
 .executive-brief {

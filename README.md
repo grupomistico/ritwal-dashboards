@@ -1,6 +1,6 @@
 # Ritwal Intelligence
 
-Plataforma unificada de dashboards para alta gerencia y operaciones de Ritwal. El primer despliegue es una **base funcional con datos demostrativos**: valida arquitectura, lenguaje visual, rendimiento y despliegue sin presentar cifras ficticias como información real del negocio.
+Plataforma unificada de dashboards para alta gerencia y operaciones de Ritwal. La portada es una **base funcional con datos demostrativos** y convive con snapshots reales, agregados y certificados que se identifican de forma explícita.
 
 ## Principios del producto
 
@@ -88,7 +88,11 @@ type DashboardEnvelope<T> = {
 - `Dockerfile`: imagen multi-stage, usuario sin privilegios, puerto 3000.
 - Variables de ejecución: únicamente desde Dokploy. `.env.example` contiene nombres, nunca secretos.
 
-El modo actual reporta `dataMode: demo` y `productionSourcesConfigured: false` de forma intencional.
+El modo actual reporta `dataMode: mixed`: la portada sigue en demo y el catálogo declara los snapshots certificados disponibles. `productionSourcesConfigured: false` indica que aún no hay una fuente viva conectada al frontend.
+
+### Snapshot certificado disponible
+
+- `/presentaciones/avance-presupuesto-agosto-2026-08-18`: avance de venta base de agosto al día 18, comparado con julio 1–18 y agosto de 2025 1–18. Es un corte inmutable, agregado y sin PII; no se presenta como tiempo real.
 
 ## Acceso
 
